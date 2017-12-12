@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 19 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 19
+      </h1>
+      <h3 class="text-muted">
+          Oct 24, 2017 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/19_feni_oct_24">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/19_feni_oct_24/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h2 id="sql---structured-query-language-mysql">SQL - Structured query language, Mysql</h2>
+<p><code class="highlighter-rouge">SQL - Structured query language</code> is not case sensitive     so <code class="highlighter-rouge">select</code> and <code class="highlighter-rouge">SELECT</code> same thing</p>
+
+<h3 id="to-login-into-mysql">to login into mysql</h3>
+<p>Try to use <code class="highlighter-rouge">CMD</code> instead of <code class="highlighter-rouge">git bash</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysql -u root -p
+// in git bash shell in windows
+winpty mysql -u root -p
+</code></pre></div></div>
+
+<h3 id="to-show-databases">to show databases</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="n">DATABASES</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="to-show-tables">to show tables</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SHOW</span> <span class="n">TABLES</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="to-create-a-database">To create a database</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="o">&lt;</span><span class="n">databaseName</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<h3 id="to-use-database">To use database</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="o">&lt;</span><span class="n">databaseName</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="to-create-a-table">to create a table</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">students</span> <span class="p">(</span>
+  <span class="n">id</span> <span class="n">int</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span> <span class="n">auto_increment</span><span class="p">,</span>
+  <span class="n">first_name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+  <span class="n">last_name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span><span class="p">,</span>
+  <span class="n">email</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="to-know-details-of-table">to know details of table;</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DESCRIBE</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="to-insert-into-table">To Insert into table</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">INSERT</span> <span class="k">INTO</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">);</span>
+<span class="o">//</span><span class="n">ie</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">students</span><span class="p">(</span><span class="n">first_name</span><span class="p">,</span> <span class="n">last_name</span><span class="p">,</span> <span class="n">email</span><span class="p">)</span> <span class="k">VALUES</span><span class="p">(</span><span class="s1">'tanim'</span><span class="p">,</span> <span class="s1">'ahmed'</span><span class="p">,</span> <span class="s1">'tanim@gmail.com'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="to-read-data">to read data</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">from</span>  <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">select</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">from</span>  <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">select</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">from</span> <span class="n">students</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">someValue</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">select</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">from</span> <span class="n">students</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">like</span> <span class="o">&lt;</span><span class="n">someValue</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">select</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">from</span> <span class="n">students</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;</span> <span class="k">like</span> <span class="o">&lt;%</span><span class="n">someValue</span><span class="o">%&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="to-update">to update</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">update</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span> <span class="k">set</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;=&lt;</span><span class="n">someValue</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;=&lt;</span><span class="n">someValue</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="to-delete">to delete</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">delete</span> <span class="k">from</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span> <span class="k">where</span> <span class="o">&lt;</span><span class="n">columnName</span><span class="o">&gt;=&lt;</span><span class="n">someValue</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="drop--database">drop  database</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">drop</span> <span class="k">database</span> <span class="o">&lt;</span><span class="n">databaseName</span><span class="o">&gt;</span>
+</code></pre></div></div>
+<h3 id="drop--table">drop  table</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">drop</span> <span class="k">table</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="rename-table-name">rename table name</h3>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">ALTER</span> <span class="o">&lt;</span><span class="n">tableName</span><span class="o">&gt;</span> <span class="k">rename</span> <span class="k">to</span> <span class="o">&lt;</span><span class="n">newTableName</span><span class="o">&gt;</span>
+</code></pre></div></div>
+
+<h3 id="backup">Backup</h3>
+<p>When you backup sql you have to go out of mysql console</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mysqldump -p -u root &lt;databaseName&gt; &gt; &lt;fileLocationToBackup&gt;
+</code></pre></div></div>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-18/">&laquo; Class 18</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-20/">Class 20 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>

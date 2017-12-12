@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 13 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 13
+      </h1>
+      <h3 class="text-muted">
+          Oct 08, 2017 - Sun
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/13_feni_oct_8">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/13_feni_oct_8/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h1 id="jquery">jQuery</h1>
+<p>jQuery is a javascript DOM library. The slogan of jQuery is “write less do more”. Today We have learnt about 4 jquery function</p>
+
+<ul>
+  <li>jQuery / $ (selector)</li>
+  <li>html (‘html content’) / html()</li>
+  <li>hide () / hide(time in milliseconds)</li>
+  <li>on(event, function)</li>
+</ul>
+
+<h3 id="to-select-a-dom-element">to select a dom element</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">);</span>
+<span class="nx">or</span> 
+<span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="to-get-html-from-dom">to get html from dom</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">htmlContent</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">html</span><span class="p">();</span>
+</code></pre></div></div>
+
+<h3 id="to-set-html">to set html</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">);</span>
+<span class="nx">heading</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="s1">'some html content'</span><span class="p">)</span> 
+</code></pre></div></div>
+
+<h3 id="to-hide-some-element-in-dom">to hide some element in dom</h3>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">heading</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">);</span>
+<span class="nx">heading</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+<span class="nx">heading</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Since jQuery Selector very small so we can keep those selector and action in same line. It will saves one line of extra code.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">hide</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">hide</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</code></pre></div></div>
+<h3 id="event-in-jquery">Event in Jquery</h3>
+<p>To create a event we use <code class="highlighter-rouge">on</code> function which take 2 arguments. event and function</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">rezwana</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'hello  rezwana'</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="nx">rezwana</span><span class="p">);</span>
+</code></pre></div></div>
+<p>We can write anonymous(unnamed/closure/callback) function. like following</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">alert</span><span class="p">(</span><span class="s1">'hello  rezwana'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="some-common-events-in-jquery">Some Common events in jquery</h3>
+<ul>
+  <li>Mouse Event
+    <ul>
+      <li>click</li>
+      <li>dblclick</li>
+      <li>mouseenter</li>
+      <li>mouseleave</li>
+    </ul>
+  </li>
+  <li>Keyboard Event
+    <ul>
+      <li>keypress</li>
+      <li>keydown</li>
+      <li>keyup</li>
+    </ul>
+  </li>
+  <li>Document Event
+    <ul>
+      <li>load</li>
+      <li>resize</li>
+    </ul>
+  </li>
+  <li>Form Event
+    <ul>
+      <li>submit</li>
+      <li>change</li>
+      <li>focus</li>
+    </ul>
+  </li>
+</ul>
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-12/">&laquo; Class 12</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-14/">Class 14 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>

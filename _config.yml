@@ -3,7 +3,7 @@
 baseurl: '/h43'
 name: H-43
 title: H-43
-permalink: /:title
+permalink: /:title/
 
 # about page
 training_type: Top Up IT Training (php)

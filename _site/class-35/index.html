@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 35 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 35
+      </h1>
+      <h3 class="text-muted">
+          Nov 23, 2017 - Thu
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/35_feni_nov_23">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/35_feni_nov_23/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h3 id="clean-url-or-pretty-url-in-php">clean url or pretty url in php</h3>
+<p>clean routing in php is very easy. But it make your website url pretty and it’s SEO friendly</p>
+
+<hr />
+
+<p>Inside <code class="highlighter-rouge">index.php</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$purl</span> <span class="o">=</span>  <span class="nb">parse_url</span><span class="p">(</span> <span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">'REQUEST_URI'</span><span class="p">],</span> <span class="nx">PHP_URL_PATH</span><span class="p">);</span>
+<span class="nv">$path</span> <span class="o">=</span> <span class="nb">trim</span><span class="p">(</span><span class="nv">$purl</span><span class="p">,</span> <span class="s1">'/'</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">array_key_exists</span><span class="p">(</span><span class="nv">$path</span><span class="p">,</span> <span class="nv">$routes</span><span class="p">))</span>  <span class="p">{</span>
+  <span class="k">require</span> <span class="nv">$routes</span><span class="p">[</span><span class="nv">$path</span><span class="p">];</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+  <span class="k">require</span> <span class="s1">'views/notfound.view.php'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Routes array will be look like following</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$routes</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">''</span> <span class="o">=&gt;</span> <span class="s1">'controllers/index.controller.php'</span><span class="p">,</span>
+  <span class="s1">'about'</span> <span class="o">=&gt;</span> <span class="s1">'controllers/about.controller.php'</span><span class="p">,</span>
+  <span class="s1">'contact'</span> <span class="o">=&gt;</span> <span class="s1">'controllers/contact.controller.php'</span><span class="p">,</span>
+<span class="p">];</span>
+</code></pre></div></div>
+
+<h2 id="creating-our-very-own-mvc-project-with-illuminate-database-project-todo-list">creating our very own mvc project with illuminate database project todo list</h2>
+
+<ul>
+  <li>2 package required (<code class="highlighter-rouge">illuminate/database</code>, <code class="highlighter-rouge">illuminate/events</code>)</li>
+  <li>create core/db.php and keep db connection code inside db.php file</li>
+  <li>add credentials to db.php</li>
+  <li>I will add db.php in files array in composer.json file for auto loading. So that in every other file I don’t need required</li>
+  <li>composer dump autoload command execute</li>
+  <li>table create using illuminate schema where following column must be added (id, created_at, updated_at)</li>
+  <li>drop table using illuminate schema</li>
+  <li>2 model City, Doctor which extends illuminate/database/eloquent/model</li>
+  <li>add table name to model</li>
+  <li>add fillable or guarded to model</li>
+  <li>make relationship between 2 model</li>
+  <li>create city and doctor controller and view</li>
+  <li>show city and doctor controller and view</li>
+  <li>add routing for 4 file</li>
+  <li>adding navbar for convenient navigation</li>
+</ul>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-34/">&laquo; Class 34</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-36/">Class 36 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>
