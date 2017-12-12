@@ -59,7 +59,7 @@
         <div class="link-wrapper mb-5">
           
             <a  href="https://github.com/http://github.com/">
-              <i class="fa fa-github" aria-hidden="true"></i>
+              <i title="github user name" class="fa fa-github" aria-hidden="true"></i>
               Github
             </a>
           
@@ -72,6 +72,9 @@
           
 
           
+
+          
+
 
           
         </div>
