@@ -1,0 +1,43 @@
+---
+repo: 34_feni_nov_21
+number: 34 
+---
+
+
+### using illuminate/database eloquent in our model    
+Model name always will be singular form and first letter of model will be uppercase. Its kind of convention. Table name will plural and all lowercase     
+In our case table name is `cities` and Model name is `City`. Which extends Eloquent Model     
+In our case table name is `people` and Model name is `Person`. Which extends Eloquent Model     
+
+~~~php
+use Illuminate\Database\Eloquent\Model;
+class Person extends Model {
+  protected $table = 'people';
+  protected $guared = [];
+}
+~~~
+
+### using relationship
+
+If we think about plain English `people` belogs to `city` and `city` has many `people`. So in city table we will add column `person_id`
+* City has many people
+* people belongs to city     
+
+So city model   
+
+~~~php
+public function people () {
+    return $this->hasMany(Person::class);
+  }
+~~~
+
+So in Person model     
+
+~~~php
+public function city() {
+  return $this->belongsTo(City::class);
+}
+~~~
+
+
+

@@ -1,0 +1,77 @@
+---
+repo: 40_feni_dec_05
+number: 40
+---
+
+## make a built in auth
+
+~~~bash
+php artisan make:auth
+~~~
+
+## add database credential
+
+open `.env` file and give database credential. If you don't have `.env` file just make a `.env` file and copy content from `.env.example` file
+
+## to migrate database
+
+~~~php
+php artisan migrate
+~~~
+
+# for max length email in case of you are getting error 
+
+Add schema default string length `AppServiceProvider`
+
+~~~php
+Schema::defaultStringLength(191);
+~~~
+
+#  to create a model along with migration
+
+~~~php
+php artisan make:model <modelname> -m
+~~~
+
+# you have to use csrf field inside form
+
+~~~php
+
+csrf_field()
+
+~~~
+# add guarded property inside model
+
+~~~php
+  protected $guarded = [];
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
+~~~
+
+# add relationship inside model
+
+~~~php
+  //inside Post model
+  public function user()
+  {
+    return $this->belongsTo(User::class);
+  }
+
+  //inside User Model
+  public function posts()
+  {
+      return $this->hasMany(Post::class);
+  }
+~~~
+
+
+# Pro tips for using namespace in php
+
+Install `php companion` package in sublime. Keep cursor inside Class and type `ctrl+shift+p`. type `find use` in sublime command palate. It will add use class top of the file      
+Use `ctrl+p` to quickly find file in `sublime` or `vscode`    
+
+If you are using vscode install `php intelephense`
+
+

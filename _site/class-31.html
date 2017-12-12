@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 31 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 31
+      </h1>
+      <h3 class="text-muted">
+          Nov 14, 2017 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/31_feni_nov_14">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/31_feni_nov_14/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <p>Today we’ve made a command line Application using php. Which will generate our mvc project and we can create route, view, and controller in command line</p>
+
+<h2 id="documentation-for-mvcphp-file">documentation for mvc.php file.</h2>
+<p>mvc.php is a command line Application. Which actually help you to bootstrap your php project quicker.  <br />
+first download mvc.php file from github. Make a folder and keep <code class="highlighter-rouge">mvc.php</code> file in this folder. open this folder in your terminal.</p>
+<ul>
+  <li>To bootstrap  your project, command will be <code class="highlighter-rouge">php mvc.php</code></li>
+  <li>To create a route, command will be <code class="highlighter-rouge">php mvc.php r:&lt;routeName&gt;</code></li>
+  <li>To create a view, command will be <code class="highlighter-rouge">php mvc.php v:&lt;routeName&gt;</code></li>
+  <li>To create a controller, command will be <code class="highlighter-rouge">php mvc.php c:&lt;routeName&gt;</code></li>
+  <li>To create a route, view and controller command will be <code class="highlighter-rouge">php mvc.php rvc:&lt;routeName&gt;</code> <br />
+Hope it will help you much in your future.</li>
+</ul>
+
+<h2 id="how-can-you-make-this-command-line-application--inorder-to-make-a-command-line-application-you-go-through-below-functions-which-will-help-you-to-make-your-very-own-command-line-application">How can you make this command line Application ? Inorder to make a command line Application you go through below functions which will help you to make your very own command line Application.</h2>
+
+<h3 id="explode-function">explode function</h3>
+<p>explode function split a string into array. It takes 2 parameter. one is <code class="highlighter-rouge">delimiter</code>, two is string you wan t to explode.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">explode</span><span class="p">(</span><span class="nx">delimiter</span><span class="p">,</span> <span class="nx">string</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>suppose <code class="highlighter-rouge">sumon mujib sarwar</code> is a string. We can make this string into array where delimiter will be empty space ` `.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// here we are convert string into array where delimiter is space.
+</span><span class="nv">$friends_string</span> <span class="o">=</span> <span class="s1">'sumon mujib sarwar'</span><span class="p">;</span>
+<span class="nv">$friens_array</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="nv">$friends_string</span><span class="p">);</span>
+
+
+<span class="c1">// here we are convert string into array where delimiter is comma and space
+</span><span class="nv">$friends_string</span> <span class="o">=</span> <span class="s1">'sumon, mujib, sarwar'</span><span class="p">;</span>
+<span class="nv">$friens_array</span> <span class="o">=</span> <span class="nb">explode</span><span class="p">(</span><span class="s1">', '</span><span class="p">,</span> <span class="nv">$friends_string</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="list-function"><code class="highlighter-rouge">list</code> function</h3>
+<p><code class="highlighter-rouge">list</code> function help use quicker way assign some variable from array. From the following array we destructing array into variable  via older approach.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$friends</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sumon'</span><span class="p">,</span> <span class="s1">'sarwar'</span><span class="p">,</span> <span class="s1">'tanim'</span><span class="p">];</span>
+<span class="nv">$friends1</span> <span class="o">=</span> <span class="nv">$friends</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="nv">$friends2</span> <span class="o">=</span> <span class="nv">$friends</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+<span class="nv">$friends3</span> <span class="o">=</span> <span class="nv">$friends</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>we assign 3 variable 3 separate line. We can do things in one line using <code class="highlighter-rouge">list</code> function.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$friends</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sumon'</span><span class="p">,</span> <span class="s1">'sarwar'</span><span class="p">,</span> <span class="s1">'tanim'</span><span class="p">];</span>
+<span class="k">list</span><span class="p">(</span><span class="nv">$friends1</span><span class="p">,</span> <span class="nv">$friends2</span><span class="p">,</span> <span class="nv">$friends3</span><span class="p">)</span> <span class="o">=</span> <span class="nv">$friends</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h3 id="heredoc">Heredoc</h3>
+<p>For larger block of string we are using heredoc. Heredoc start with <code class="highlighter-rouge">&lt;&lt;&lt;</code> and followed by a identifier. closing identifier should be written without any indentation. In between starting and ending identifier we will write our string. Heredoc support string interpolation</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$content</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;TEXT
+Hello world 
+TEXT;
+</span></code></pre></div></div>
+
+<p>Here we keep <code class="highlighter-rouge">TEXT</code> as identifier. You can write anything as identifier.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Shibu deb polo'</span><span class="p">;</span>
+<span class="nv">$content</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;BANGLADESH
+Hello, my name is $name.
+BANGLADESH;
+</span><span class="c1">// output will be 
+</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">my</span> <span class="nx">name</span> <span class="nx">is</span> <span class="nx">Shibu</span> <span class="nx">deb</span> <span class="nx">polo</span><span class="o">.</span>
+</code></pre></div></div>
+
+<h3 id="nowdoc">Nowdoc</h3>
+<p>Nowdoc and heredoc more or less same only different is nowdoc not support string interpolation starting identifier should be encapsulate with <code class="highlighter-rouge">'</code> quote.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'Shibu deb polo'</span><span class="p">;</span>
+<span class="nv">$content</span> <span class="o">=</span> <span class="sh">&lt;&lt;&lt;'BANGLADESH'
+Hello, my name is $name.
+BANGLADESH;
+</span><span class="c1">// output will be 
+</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">my</span> <span class="nx">name</span> <span class="nx">is</span> <span class="nv">$name</span><span class="o">.</span>
+</code></pre></div></div>
+
+<h2 id="file-handling-in-php">file handling in php</h2>
+<p>File handling in php is very easy. It has very easy syntax for manipulating files. suppose in real life in order to write something inside a file what we generally do?</p>
+<ul>
+  <li>open a file</li>
+  <li>write something in this file</li>
+  <li>close this file</li>
+</ul>
+
+<h3 id="file-open">file open</h3>
+<p>In php, to open file we use <code class="highlighter-rouge">fopen</code>. which takes 2 arguments. first argument is, which file I want to open. 2nd argument is, what is the reason behind for opening this file. say we open file for reading we will give <code class="highlighter-rouge">r</code>. If we open file for writing we will give <code class="highlighter-rouge">w</code>. If we open file for appending new line we will give <code class="highlighter-rouge">w</code>. If the file you want to open is not exists, it will create this file and open it for you.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$file</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="s1">'hello.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here we open <code class="highlighter-rouge">hello.txt</code> file for writing content inside.</p>
+<h3 id="writing-content-inside-file">writing content inside file</h3>
+<p>for writing content inside file we will use <code class="highlighter-rouge">fwrite</code> function.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">fwrite</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span> <span class="s1">'hello world from dhaka'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here I wrote  <code class="highlighter-rouge">hello world from dhaka</code> inside my <code class="highlighter-rouge">hello.txt</code> file.</p>
+
+<h3 id="closing-file">closing file</h3>
+<p>After writing down we have to close our file using <code class="highlighter-rouge">fclose</code> function.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">fclose</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="make-a-directory">make a directory</h3>
+<p>Using <code class="highlighter-rouge">mkdir</code> function we can create a folder in php</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir</span><span class="p">(</span><span class="s1">'new-folder'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>here we created <code class="highlighter-rouge">new-folder</code>.</p>
+
+<h3 id="checking-file-or-folder-exists-or-not">checking file or folder exists or not</h3>
+<p>Using <code class="highlighter-rouge">file_exists</code> function we can check whether file or folder exists or not. So file_exists function will give use a boolean value.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// checking new folder exists or not
+</span><span class="nb">file_exists</span><span class="p">(</span><span class="s1">'new'</span><span class="p">);</span>
+<span class="c1">// checking hello.txt file exists or not
+</span><span class="nb">file_exists</span><span class="p">(</span><span class="s1">'hello.txt'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="argv-array-for-command-line-input">argv array for command line input</h3>
+<p>all command line input will be stored inside argv array in php. 
+suppose in terminal I typed <code class="highlighter-rouge">php hello.php</code> in this case <code class="highlighter-rouge">argv</code>  first element will be <code class="highlighter-rouge">hello.php</code>. suppose in terminal I typed <code class="highlighter-rouge">php hello.php dhaka</code>. In this case <code class="highlighter-rouge">argv</code> first element will be <code class="highlighter-rouge">hello.php</code> 2nd element will be <code class="highlighter-rouge">dhaka</code>.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//in terminal
+</span><span class="nx">php</span> <span class="nx">mvc</span><span class="o">.</span><span class="nx">php</span> <span class="nx">c</span><span class="o">:</span><span class="nx">index</span>
+
+<span class="c1">//inside mvc.php
+</span><span class="nv">$filename</span> <span class="o">=</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">// will return mvc.php
+</span><span class="nv">$command</span> <span class="o">=</span> <span class="nv">$argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">// will return c:index
+</span></code></pre></div></div>
+
+<p>If you understand today class Hope you will make lot of interesting command line Application using PHP. like <code class="highlighter-rouge">mvc.php</code></p>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-30">&laquo; Class 30</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-32">Class 32 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>

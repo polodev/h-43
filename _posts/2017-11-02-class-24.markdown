@@ -1,0 +1,6 @@
+---
+repo: 24_feni_nov_02
+number: 24 
+---
+
+Today class kind of representation of earlier classes. So go through earlier class

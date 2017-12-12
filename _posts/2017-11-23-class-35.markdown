@@ -1,0 +1,70 @@
+---
+repo: 35_feni_nov_23
+number: 35 
+---
+
+### clean url or pretty url in php
+clean routing in php is very easy. But it make your website url pretty and it's SEO friendly     
+
+
+<hr>
+
+
+
+Inside `index.php`
+
+~~~php
+$purl =  parse_url( $_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$path = trim($purl, '/');
+if (array_key_exists($path, $routes))  {
+  require $routes[$path];
+}else {
+  require 'views/notfound.view.php';
+}
+~~~
+
+
+Routes array will be look like following     
+
+~~~php
+$routes = [
+  '' => 'controllers/index.controller.php',
+  'about' => 'controllers/about.controller.php',
+  'contact' => 'controllers/contact.controller.php',
+];
+~~~
+
+## creating our very own mvc project with illuminate database project todo list
+
+* 2 package required (`illuminate/database`, `illuminate/events`)
+* create core/db.php and keep db connection code inside db.php file
+* add credentials to db.php
+* I will add db.php in files array in composer.json file for auto loading. So that in every other file I don't need required
+* composer dump autoload command execute
+* table create using illuminate schema where following column must be added (id, created_at, updated_at)
+* drop table using illuminate schema
+* 2 model City, Doctor which extends illuminate/database/eloquent/model
+* add table name to model
+* add fillable or guarded to model
+* make relationship between 2 model
+* create city and doctor controller and view
+* show city and doctor controller and view
+* add routing for 4 file
+* adding navbar for convenient navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

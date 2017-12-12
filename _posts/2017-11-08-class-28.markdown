@@ -1,0 +1,39 @@
+---
+repo: 28_feni_nov_08
+number: 28 
+---
+
+### static database connection function inside db class.     
+All config should be passed when we invoke `connection` function
+
+~~~php
+<?php
+class Db {
+  public static function connection ($config)  {
+    return new PDO($config['dsn'], $config['user'], $config['password'], $config['options']);
+  } 
+}
+
+~~~
+
+### Register user abstract way. By making a Query class.
+
+~~~php
+<?php
+class Query  {
+  protected $connection;
+  public function __construct($db)
+  {
+    $this->connection = $db;
+  }
+  public function registerUser ($array) {
+    $name = $array['name'];
+    $email = $array['email'];
+    $password = $array['password'];
+    $sql = "insert into users (name, email, password) values ('$name', '$email', '$password')";
+    $statement = $this->connection->prepare($sql);
+    return $statement->execute();
+  }
+}
+
+~~~

@@ -1,0 +1,33 @@
+---
+repo: 02_feni_sep_18
+number: 2 
+---
+
+## html essential tag
+* html
+* h1 ~ h6
+* title
+* body
+* p
+* ul
+* ol
+* li
+* table
+* tr
+* th / td
+* img [attribute: src, title, alt]
+* a [attribute: href, title, target] [value: _blank]
+* form
+* label [attribute: for]
+* input [attribute: type, value, placeholder] [value: text, password, email, submit]
+
+## to install live-server globally
+npm install -g live-server
+
+
+# terminal command  
+
+#### to remove file
+~~~
+rm <filename>
+~~~

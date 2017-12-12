@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 22 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 22
+      </h1>
+      <h3 class="text-muted">
+          Oct 31, 2017 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/22_feni_oct_31">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/22_feni_oct_31/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h1 id="crud-in-php-mysql">CRUD in PHP MYSQL</h1>
+
+<p>Here is the basic tutorial how to do crud in mysqli and pdo.</p>
+
+<ul>
+  <li>first create a database name company.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="n">company</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>select company database.</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">USE</span> <span class="n">company</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Create a people table with name and email field</li>
+</ul>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">people</span> <span class="p">(</span>
+    <span class="n">id</span> <span class="n">INT</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="n">AUTO_INCREMENT</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">name</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span><span class="p">,</span>
+    <span class="n">email</span> <span class="n">VARCHAR</span><span class="p">(</span><span class="mi">255</span><span class="p">)</span> <span class="k">NOT</span> <span class="k">NULL</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="crud-using-mysqli">CRUD using Mysqli</h2>
+
+<ul>
+  <li>Connect php with mysql through <code class="highlighter-rouge">mysqli_connect</code> function</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$host</span> <span class="o">=</span> <span class="s1">'localhost'</span><span class="p">;</span>
+<span class="nv">$dbname</span> <span class="o">=</span> <span class="s1">'company'</span><span class="p">;</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="s1">'root'</span><span class="p">;</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+
+<span class="nv">$conn</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$host</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$dbname</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Check connection successful or not</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">connect_errno</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s1">'not connected'</span><span class="p">;</span>
+<span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s1">'connect successfully'</span><span class="p">;</span>  
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Insert a row in database (C)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span> <span class="s2">"INSERT INTO people(name, email) VALUES ('polo', 'polo@gmail.com')"</span> <span class="p">)</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>Read from database (R)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$results</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s1">'SELECT * FROM people'</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$results</span><span class="o">-&gt;</span><span class="na">fetch_assoc</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'name'</span><span class="p">]</span> <span class="o">.</span> <span class="s2">" "</span> <span class="o">.</span> <span class="nv">$row</span><span class="p">[</span><span class="s1">'email'</span><span class="p">]</span> <span class="o">.</span> <span class="s1">'&lt;br/&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Update Database (U)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span> <span class="s2">"UPDATE PEOPLE SET name='vasanth', email='vasanth@gmail.com' WHERE id=3"</span> <span class="p">)</span> 
+</code></pre></div></div>
+
+<ul>
+  <li>Delete Database (D)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span> <span class="s2">"DELETE FROM people WHERE id=3"</span> <span class="p">)</span> 
+</code></pre></div></div>
+
+<h2 id="crud-using-pdo">CRUD using PDO</h2>
+<p>CRUD using PDO actully best practice for php crud. This is because PDO is database agnostic. I mean you can use any database whether its mysql, postgresql or oracle.</p>
+
+<ul>
+  <li>Connect php with mysql through pdo instantiation and check whether pdo connection successful or not using by writing pdo instantiation inside <code class="highlighter-rouge">try catch</code> block;</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$server</span> <span class="o">=</span> <span class="s1">'localhost'</span><span class="p">;</span>
+<span class="nv">$user</span> <span class="o">=</span> <span class="s1">'root'</span><span class="p">;</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
+<span class="nv">$dbname</span> <span class="o">=</span> <span class="s1">'company'</span><span class="p">;</span>
+<span class="nv">$options</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_ERRMODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">ERRMODE_EXCEPTION</span><span class="p">,</span>
+    <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_PERSISTENT</span> <span class="o">=&gt;</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">PDO</span><span class="o">::</span><span class="na">ATTR_DEFAULT_FETCH_MODE</span> <span class="o">=&gt;</span> <span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_OBJ</span>
+<span class="p">];</span>
+
+<span class="c1">//connection 
+</span>
+<span class="k">try</span> <span class="p">{</span>
+  <span class="nv">$conn</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s2">"mysql:dbname=</span><span class="nv">$dbname</span><span class="s2">;host=</span><span class="nv">$server</span><span class="s2">"</span><span class="p">,</span> <span class="nv">$user</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$options</span><span class="p">);</span>
+  <span class="k">echo</span> <span class="s1">'connection successful'</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">PDOExceptions</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p>here PDO took 4 arguments. dsn, username, password, options. dsn means data souce name. in our case dsn is</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"mysql:dbname=</span><span class="nv">$dbname</span><span class="s2">;host=</span><span class="nv">$server</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>In dsn first we mention which driver we will use. In our case we use <code class="highlighter-rouge">mysql</code>. then put a <code class="highlighter-rouge">:</code> and give <code class="highlighter-rouge">dbname</code> and <code class="highlighter-rouge">host</code> name.</p>
+
+<ul>
+  <li>Insert a row in database using direct sql query (C)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">"INSERT INTO people (name, email) VALUES('polo', 'polo@gmail.com')"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Insert a row using prepare method in database (C)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'polo'</span><span class="p">;</span>
+<span class="nv">$email</span>  <span class="o">=</span> <span class="s1">'polo@gmail.com'</span><span class="p">;</span>
+<span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"INSERT INTO people (name, email) VALUES(:name, :email)"</span><span class="p">);</span>
+<span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">':name'</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span> <span class="s1">':email'</span> <span class="o">=&gt;</span> <span class="nv">$email</span><span class="p">]);</span>
+</code></pre></div></div>
+<p>So from state above we understand we can insert data into  database using direct sql query or prepare statement. We always use prepare statement. Since its more flexible when we work with variable data. In real work we will insert data with variable data. Beside this we can sanitize data when execute function call.</p>
+
+<ul>
+  <li>Read from database (R)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span> <span class="s2">"SELECT * FROM people"</span> <span class="p">);</span>
+<span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">();</span>
+<span class="k">while</span><span class="p">(</span><span class="nv">$row</span> <span class="o">=</span> <span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">fetch</span><span class="p">())</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="s1">'&lt;b&gt;Name:&lt;/b&gt;: '</span> <span class="o">.</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">name</span> <span class="o">.</span> <span class="s2">" &lt;b&gt;Email:&lt;/b&gt; "</span> <span class="o">.</span> <span class="nv">$row</span><span class="o">-&gt;</span><span class="na">email</span> <span class="o">.</span> <span class="s1">'&lt;br/&gt;'</span><span class="p">;</span>
+  <span class="k">echo</span> <span class="s1">'&lt;br/&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Update Database (U)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'vasanth'</span><span class="p">;</span>
+<span class="nv">$email</span>  <span class="o">=</span> <span class="s1">'vasanth@gmail.com'</span><span class="p">;</span>
+<span class="nv">$id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"UPDATE people SET name=:name, email=:email WHERE id=:id"</span><span class="p">);</span>
+<span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">':name'</span> <span class="o">=&gt;</span> <span class="nv">$name</span><span class="p">,</span> <span class="s1">':email'</span> <span class="o">=&gt;</span> <span class="nv">$email</span><span class="p">,</span> <span class="s1">':id'</span> <span class="o">=&gt;</span> <span class="nv">$id</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Delete Database (D)</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="na">prepare</span><span class="p">(</span><span class="s2">"DELETE FROM people WHERE id=:id"</span><span class="p">);</span>
+<span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">execute</span><span class="p">([</span><span class="s1">':id'</span><span class="o">=&gt;</span> <span class="mi">28</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>Thats all. Hope Now you will be able to do crud operation using <code class="highlighter-rouge">mysqli</code> or <code class="highlighter-rouge">PDO</code> in <code class="highlighter-rouge">php</code>.</p>
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-21">&laquo; Class 21</a>
+    
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-23">Class 23 &raquo;</a>
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>

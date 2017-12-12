@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Class 43 | H-43</title>
+  <link rel="icon" href="http://localhost:4000/h43/assets/images/page/favicon.ico">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="/h43/assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/h43/css/style.css">
+</head>
+<body class="bg_random_color">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:4000/h43/">H-43</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/projects">Projects</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://localhost:4000/h43/students">Students</a>
+          </li>
+          <li class="nav-item ">
+            <a href="http://localhost:4000/h43/notices" class="nav-link">Notices</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container bg-light py-5 my-5">
+  <div class="py-2 text-center">
+      <h1 class="title">
+        Class 43
+      </h1>
+      <h3 class="text-muted">
+          Dec 12, 2017 - Tue
+      </h3>
+      </h1>
+      <hr>
+      <div>
+        
+          <a target="_blank" class="btn btn-lg btn-outline-info mx-3 my-3" href="https://github.com/poloey/43_feni_dec_12">View On Github</a>
+        
+        
+          <a class="btn btn-lg btn-outline-danger mx-3" href="https://codeload.github.com/poloey/43_feni_dec_12/zip/master">Download class file</a>
+        
+      </div>
+      <hr>
+  </div>
+
+  <div class="">
+    <h2 id="routing-wild-card">routing wild card</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//inside router
+</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/posts/{author}'</span><span class="p">,</span> <span class="s1">'srkController@author'</span><span class="p">);</span>
+<span class="c1">//controller
+</span><span class="k">public</span> <span class="k">function</span> <span class="nf">author</span> <span class="p">(</span><span class="nv">$author</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">echo</span> <span class="nv">$author</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for-route-naming-and-url">for route naming and url</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//web.php
+</span><span class="nx">Route</span><span class="o">::</span><span class="na">get</span><span class="p">(</span><span class="s1">'/create'</span><span class="p">,</span> <span class="s1">'srkController@create'</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">(</span><span class="s1">'sarwar'</span><span class="p">);</span>
+<span class="c1">// in blade file
+</span>
+<span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"</span><span class="si">{</span><span class="nv">{route('name')}</span><span class="si">}</span><span class="s2">"</span><span class="o">&gt;&lt;/</span><span class="nx">a</span><span class="o">&gt;</span>
+
+</code></pre></div></div>
+
+<h2 id="how-to-add-login-and-register-and-logout-in-blade-file">how to add login and register and logout in blade file</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+
+<span class="c1">//inside blade file
+</span><span class="o">@</span><span class="nx">guest</span>
+<span class="o">&lt;</span><span class="nx">li</span> <span class="k">class</span><span class="err">="</span><span class="nc">nav</span><span class="o">-</span><span class="nx">item</span><span class="s2">"&gt;
+  &lt;a class="</span><span class="nx">nav</span><span class="o">-</span><span class="nb">link</span><span class="s2">" href="</span><span class="p">{{</span><span class="nx">route</span><span class="p">(</span><span class="s1">'login'</span><span class="p">)}}</span><span class="s2">"&gt;Login&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="</span><span class="nx">nav</span><span class="o">-</span><span class="nx">item</span><span class="s2">"&gt;
+  &lt;a class="</span><span class="nx">nav</span><span class="o">-</span><span class="nb">link</span><span class="s2">" href="</span><span class="p">{{</span><span class="nx">route</span><span class="p">(</span><span class="s1">'register'</span><span class="p">)}}</span><span class="s2">"&gt;Register&lt;/a&gt;
+&lt;/li&gt;
+@else 
+&lt;li class="</span><span class="nx">nav</span><span class="o">-</span><span class="nx">item</span><span class="s2">"&gt;
+  &lt;a href="" class="</span><span class="nx">nav</span><span class="o">-</span><span class="nb">link</span><span class="s2">" onclick="</span><span class="nx">event</span><span class="o">.</span><span class="nx">preventDefault</span><span class="p">();</span> <span class="nx">document</span><span class="o">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'logout-form'</span><span class="p">)</span><span class="o">.</span><span class="nx">submit</span><span class="p">();</span><span class="s2">"&gt;logout&lt;/a&gt;
+  &lt;form id="</span><span class="nx">logout</span><span class="o">-</span><span class="nx">form</span><span class="s2">" action="</span><span class="p">{{</span> <span class="nx">route</span><span class="p">(</span><span class="s1">'logout'</span><span class="p">)</span> <span class="p">}}</span><span class="s2">" method="</span><span class="nx">POST</span><span class="s2">" style="</span><span class="nx">display</span><span class="o">:</span> <span class="nx">none</span><span class="p">;</span><span class="s2">"&gt;
+      {{ csrf_field() }}
+  &lt;/form&gt;
+&lt;/li&gt;
+@endguest
+
+
+</span></code></pre></div></div>
+
+<h1 id="how-to-redirect-to-different-page-through-logincontroller-registercontroller">how to redirect to different page through loginController, RegisterController</h1>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">protected</span> <span class="nv">$redirectTo</span> <span class="o">=</span> <span class="s1">'/'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="we-have-to-use-namespace-everytime-we-use-a-class-using-find-use-in-sublime--in-vs-code-namespace-importer-intelipense">we have to use namespace everytime we use a class using <code class="highlighter-rouge">find use</code> in sublime.  in vs code namespace importer, intelipense</h2>
+
+<h2 id="timestamp-manipulation">timestamp manipulation</h2>
+<p>Every timestamp is a carbon instance. all method and properties can be found http://carbon.nesbot.com/docs/#api-getters</p>
+
+<h2 id="some-artisan-command">some artisan command</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php artisan migrate
+php aritsan migrate:rollback
+php aritan migrate:reset
+php aritan migrate:refresh
+</code></pre></div></div>
+
+<h2 id="to-run-others-people-code-in-your-machine">to run others people code in your machine</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">composer</span> <span class="nx">install</span>
+<span class="nx">composer</span> <span class="nx">dump</span><span class="o">-</span><span class="nx">autoload</span>
+
+<span class="c1">// make a database 
+</span><span class="nb">copy</span> <span class="o">.</span><span class="nx">env</span><span class="o">.</span><span class="nx">example</span> <span class="nx">to</span> <span class="o">.</span><span class="nx">env</span>
+<span class="nx">create</span> <span class="nx">a</span> <span class="nx">database</span>
+<span class="nx">give</span> <span class="nx">database</span> <span class="nx">credential</span> <span class="nx">to</span> <span class="o">.</span><span class="nx">env</span> <span class="nb">file</span>
+
+
+<span class="nx">php</span> <span class="nx">artisan</span> <span class="nx">cache</span><span class="o">:</span><span class="nx">clear</span>
+<span class="nx">php</span> <span class="nx">artisan</span> <span class="nb">key</span><span class="o">:</span><span class="nx">generate</span>
+
+
+
+<span class="nx">php</span> <span class="nx">artisan</span> <span class="nx">migrate</span>
+</code></pre></div></div>
+
+<h2 id="how-to-change-application-name">how to change application name</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// inside .env file
+</span><span class="nx">APP_NAME</span><span class="o">=</span><span class="nx">SRK</span>
+<span class="c1">// whenever we change something inside .env file we have to restart server
+</span></code></pre></div></div>
+
+<h2 id="migration">migration</h2>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">php</span> <span class="nx">artisan</span> <span class="nx">make</span><span class="o">:</span><span class="nx">migration</span> <span class="nx">create_cities_table</span>
+</code></pre></div></div>
+
+<h3 id="model--migration">model + migration</h3>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">php</span> <span class="nx">aritsan</span> <span class="nx">make</span><span class="o">:</span><span class="nx">model</span> <span class="nx">City</span> <span class="o">-</span><span class="nx">m</span>
+<span class="c1"># here m flag for make migration
+</span></code></pre></div></div>
+
+
+  </div>
+
+  <div class="text-center p-5">
+    
+      <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-42">&laquo; Class 42</a>
+    
+    
+  </div>
+
+
+    <div class="my-5">
+    <div id="disqus_thread"></div>
+    <script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://ey-h43.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+
+</div>
+
+
+  <footer class="bg_random_color text-light py-5 mt-5">
+    <div class="container">
+      
+      <p><a class="text-light text-underline" href="http://localhost:4000/h43/">H-43</a> is maintained by Shibu deb polo.</p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://www.facebook.com/groups/topuph43/">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          Group
+        </a>
+      </p>
+      <p>
+        <a class="btn-link text-light" target="_blank" href="https://web.facebook.com/messages/t/1337785539663986">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          messenger
+        </a>
+      </p>
+      <p class="footer-text">
+        Hosted on Github Page. This Website will be references for LICT H-43 batch for life time. Since Github page will never down. Thanks to opensource technology. Hope this attempt make work flow easier for all students of H-43 batch. Added daily documentation and class file in this website
+      </p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="/h43/assets/bootstrap/popper.min.js"></script>
+  <script src="/h43/assets/bootstrap/bootstrap.min.js"></script>
+  <script src="/h43/assets/bootstrap/color.js"></script>
+</body>
+</html>

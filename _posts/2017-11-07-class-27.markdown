@@ -1,0 +1,53 @@
+---
+repo: 27_feni_nov_07
+number: 27 
+---
+
+
+### how to access global variable inside local scope
+
+~~~php
+$hello = 'some content';
+echo $hello;
+function nizamFunction () {
+  global $hello;
+  echo $hello;
+  //or 
+  echo $GLOBALS['hello'];
+}
+nizamFunction();
+~~~
+
+### Authentication in php using session, cookies
+
+Whenever we need to use `session` we have to use `session_start` function, top of our php page
+
+~~~php
+<?php 
+session_start();
+~~~
+
+if there is no `user_id` in session we will redirect user to login page using `header` function
+
+~~~php
+session_start();
+if (! isset ($_SESSION['user_id']) ) {
+  header('Location: login.php');
+}
+~~~
+
+if there is `user_id` in session and user wants to visit login or register page we will redirect user to home or dashboard
+
+~~~php
+session_start();
+if ( isset ($_SESSION['user_id']) ) {
+  header('location: /dashboard');
+}
+~~~
+
+
+### for batch rename in bash using regular expression
+
+~~~bash
+rename 's/.php/Controller.php/' *.php
+~~~

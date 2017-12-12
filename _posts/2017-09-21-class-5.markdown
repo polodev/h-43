@@ -1,0 +1,25 @@
+---
+repo: 05_feni_sep_21
+number: 5
+---
+
+## html5 semantic tag
+ 
+* header
+* footer
+* aside
+* nav
+* section
+* article
+
+
+## html entity 
+structure fo entity `&entity_name;` OR `&#entity_number;` like
+
+~~~html
+&copy; will show ©
+&pound; will show £
+&reg; will show ®
+&lt; will show <
+~~~
+

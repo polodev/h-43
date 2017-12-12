@@ -1,0 +1,90 @@
+---
+repo: 36_feni_nov_26
+number: 36 
+---
+# php search 
+for php search we use `like` filtering in `sql`. `Sql` structure is like following   
+~~~php
+  $sql = "select * from people where name like '%nizam%' or email like '%nizam%' ";
+~~~
+Here we are seraching whethere any name or email contains `nizam` word    
+
+just a make a form and keep a input field name `q`.    
+
+
+### code for searching   
+
+
+~~~php
+$sql = 'select * from people';
+if (isset($_GET['q'])) {
+  $q = $_GET['q'];
+  $sql = "select * from people where name like '%$q%' or email like '%$q%' ";
+}
+$connection = new PDO('mysql:dbname=feni;host=localhost', 'root', '');
+$statement = $connection->prepare($sql);
+$statement->execute();
+$people = $statement->fetchAll(PDO::FETCH_OBJ);
+~~~
+
+
+
+# php pagination
+
+### rowCount in pdo
+for getting total results we use `rowCount()` function 
+
+~~~php
+$statement->rowCount();
+~~~
+
+
+### sql query for offset and limit field
+following sql to retrieve 0 to 3 row from database    
+
+~~~sql
+select * from people limit 3 offset 0 ;
+~~~
+
+
+### for retrieving data from database   
+
+~~~php
+?php
+$post_per_page = 3;
+$offset = 0;
+$page = 1;
+if (isset($_GET['page'])) {
+  $page = $_GET['page'];
+  $offset = $page * $post_per_page - $post_per_page;
+}
+$sql = "select * from people limit $post_per_page offset $offset ";
+$connection = new PDO('mysql:dbname=feni;host=localhost', 'root', '');
+$statement = $connection->prepare($sql);
+$statement->execute();
+$statement2 = $connection->prepare('select * from people');
+$statement2->execute();
+$total = $statement2->rowCount();
+$people = $statement->fetchAll(PDO::FETCH_OBJ);
+$total_page = ceil($total / $post_per_page) ;
+?>
+~~~
+
+
+## in pagination part
+
+~~~html
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item <?php echo $page < 2 ? 'disabled' : '' ?>"><a class="page-link" href="/?page=<?= $page - 1 ?>">Previous</a></li>
+    <?php for($i = 1; $i <= $total_page; $i++): ?>
+      <li class="page-item <?php echo $page == $i ? 'active': ''  ?>"><a class="page-link" href="/?page=<?= $i ?>"><?= $i ?></a></li>
+    <?php endfor; ?>
+    <li class="page-item <?php echo $page > $total_page - 1 ? 'disabled': '' ?> "><a class="page-link" href="/?page=<?= $page + 1 ?>">Next</a></li>
+  </ul>
+</nav>
+~~~
+
+
+
+
