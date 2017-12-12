@@ -1,10 +1,11 @@
 ---
 title: mojibur
 fullname: Md Mojibur Rahaman
-facebook: http://facebook.com/
+facebook: muzibur.rahmanshawon
 github: shawon1058
 email: 
-mobile:
+mobile: 1861095499
+bdskills: G042129 
 image: true
 ---
 

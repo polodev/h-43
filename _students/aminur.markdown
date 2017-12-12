@@ -1,8 +1,8 @@
 ---
 title: aminur
 fullname: Md Aminur Islam
-email: 
-mobile:
+email: aminurcse01@gmail.com
+mobile: 1715816875
 image:
 number: 3
 show_assignment: false

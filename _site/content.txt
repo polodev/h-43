@@ -58,14 +58,14 @@
       <p></p>
         <div class="link-wrapper mb-5">
           
-            <a  href="https://github.com/http://github.com/">
+            <a target="_blank"  href="https://github.com/http://github.com/">
               <i title="github user name" class="fa fa-github" aria-hidden="true"></i>
               Github
             </a>
           
 
           
-            <a  href="https://facebook.com/http://facebook.com/">
+            <a target="_blank"  href="https://facebook.com/http://facebook.com/">
               <i class="fa fa-facebook" aria-hidden="true"></i>
               Facebook 
             </a>

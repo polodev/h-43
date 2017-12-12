@@ -23,37 +23,39 @@ layout: default
       <p>{{page.about}}</p>
         <div class="link-wrapper mb-5">
           {% if page.github %}
-            <a  href="https://github.com/{{page.github}}">
+            <a target="_blank"  href="https://github.com/{{page.github}}">
               <i title="github user name" class="fa fa-github" aria-hidden="true"></i>
               Github
             </a>
           {% endif %}
 
           {% if page.facebook %}
-            <a  href="https://facebook.com/{{page.facebook}}">
+            <a target="_blank"  href="https://facebook.com/{{page.facebook}}">
               <i class="fa fa-facebook" aria-hidden="true"></i>
               Facebook 
             </a>
           {% endif %}
 
           {% if page.email %}
-            <a  href="{{page.email}}">
+            <div>
               <i class="fa fa-envelope" title="email" aria-hidden="true"></i>
               {{page.email}}
-            </a>
+            </div>
           {% endif %}
 
           {% if page.bdskills %}
+          <div>
             <i class="fa fa-id-card" title="bd skills id" aria-hidden="true"></i>
             {{page.bdskills}}
+          </div>
           {% endif %}
 
 
           {% if page.show_mobile %}
-            <a  href="{{page.mobile}}">
-              <i class="fa fa-phone"title="mobile number" aria-hidden="true"></i>
-              {{page.mobile}}
-            </a>
+          <div>
+            <i class="fa fa-phone"title="mobile number" aria-hidden="true"></i>
+            {{page.mobile}}
+          </div>
           {% endif %}
         </div>
         {% if page.show_assignment and page.github %}

@@ -1,10 +1,11 @@
 ---
 title: riazul
 fullname: Riazul Hayder
-facebook:
+facebook: riazhayder
 github:
-email: 
-mobile:
+email: hayderriaz@gmail.com
+mobile: 1684643132
 image: true
+bdskills: G035166
 ---
 

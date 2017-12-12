@@ -1,10 +1,12 @@
 ---
 title: tasnia
 fullname: Tasnia Fardous
-facebook:
+facebook: tasnia.fardous
 github: tasnia844
-email: 
-mobile:
+email: tasnia.fardous1@gmail.com
+mobile: 1913561853
 image: true
+bdskills: G036749
+show_mobile: false
 ---
 

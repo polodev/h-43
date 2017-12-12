@@ -1,10 +1,11 @@
 ---
 title: kayes
 fullname: Muhammad Kayes
-facebook: http://facebook.com/
+facebook: muhammad.kayes.1
 github: muhammadk28
-email: 
-mobile:
+email: mdkayes00@yahoo.com
+mobile: 1862915803
+bdskills: G035160
 image: true
 ---
 

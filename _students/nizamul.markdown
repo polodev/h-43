@@ -1,10 +1,11 @@
 ---
 title: nizamul
 fullname: Nizamul Haydar
-facebook: http://facebook.com/
+facebook: hayder.khan1
 github: haydarkhan
-email: 
-mobile:
+email: nizamulhaydar270@gmail.com  
+mobile: 1670317763  
+bdskills: G035232
 image: true
 ---
 

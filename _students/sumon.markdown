@@ -1,10 +1,11 @@
 ---
 title: sumon
 fullname: Md Mazidul Islam Sumon
-facebook: 
+facebook: misumoney
 github: sumoney
-email: sumon@gmail.com
-mobile:
+email: mazidsumon804@gmail.com 
+mobile: 1827606956  
+bdskills: G035172 
 image: true
 ---
 
