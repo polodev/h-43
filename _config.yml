@@ -57,7 +57,7 @@ defaults:
       image: false
       mobile: not given 
       show_mobile: true
-      show_assignment: false
+      show_assignment: true
       email: available soon
       number: 1
       facebook:
