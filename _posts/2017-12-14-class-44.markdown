@@ -7,6 +7,7 @@ number: 44
 For adding same middleware to multiple route. 
 
 ~~~php
+//auth middleware
 Route::group(['middleware' => 'auth'], function () {
   Route::get('/logout', [
     'uses' => 'SigninController@logout',
@@ -22,7 +23,7 @@ Route::group(['middleware' => 'auth'], function () {
   ]);
 });
 
-~~~
+//guest middleware
 Route::group(['middleware' => 'guest'], function () {
   Route::get('/login', [
     'uses' => 'SigninController@login',
@@ -42,9 +43,11 @@ Route::group(['middleware' => 'guest'], function () {
   ]);
 
 });
+~~~
 
-### name routing 
-we can name route by using name function or passing array to get or post function where array key `uses` will be controller and `as` will be name
+### name routing    
+
+we can name route by using name function or passing array to get or post function where array key `uses` will be controller and `as` will be name    
 ~~~php
 Route::post('/register','SignUpController@store')->name('register.store');
 //or
