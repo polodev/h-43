@@ -12,7 +12,13 @@ body {
 }
 
 a, button, p, .list-group-item {
-  font-size: $fs !important;
+  font-size: $fs;
+}
+a.student_back_button {
+  color: inherit;
+  font-size: inherit;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .text-underline {

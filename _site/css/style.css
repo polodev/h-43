@@ -167,7 +167,13 @@ body {
   font-family: "Roboto", sans-serif; }
 
 a, button, p, .list-group-item {
-  font-size: 20px !important; }
+  font-size: 20px; }
+
+a.student_back_button {
+  color: inherit;
+  font-size: inherit;
+  display: inline-block;
+  margin-right: 20px; }
 
 .text-underline {
   text-decoration: underline; }
