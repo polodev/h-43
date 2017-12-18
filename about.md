@@ -7,6 +7,7 @@ active: about
 <p><strong>Status:</strong> {{ site.status }}</p>
 <p><strong>Training Type:</strong> Top Up IT Training (php)</p>
 <p><strong>Trainer:</strong> {{site.trainer}}</p>
+<p><strong>Coordinator: </strong><a target="_blank" href="https://facebook.com/{{site.coordinator_facebook}}"> {{site.coordinator}}</a></p>
 <p><strong>Objective:</strong> Make learning material organize for life time use</p>
 <div>
   <strong>Interesting fact:</strong> I heard a fact regarding coding like

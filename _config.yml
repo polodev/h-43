@@ -4,6 +4,7 @@ baseurl: '/h43'
 name: H-43
 title: H-43
 permalink: /:title/
+all_batches: https://poloey.gitlab.io/
 
 # about page
 training_type: Top Up IT Training (php)

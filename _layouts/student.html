@@ -7,7 +7,7 @@ layout: default
   </div>
 
   {% if page.image %}
-    {%capture image %}{{page.title}}{% endcapture %}
+    {%capture image %}{{page.title | downcase }}{% endcapture %}
   {% else %}
     {%capture image %}default{% endcapture %}
   {% endif %}

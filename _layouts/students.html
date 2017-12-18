@@ -6,7 +6,7 @@ layout: page
   {% assign students = site.students | sort: 'number' %}
   {% for student in students %}
     {% if student.image %}
-      {%capture image %}{{student.title}}{% endcapture %}
+      {%capture image %}{{student.title | downcase }}{% endcapture %}
     {% else %}
       {%capture image %}default{% endcapture %}
     {% endif %}
