@@ -62,37 +62,35 @@
   </div>
 
   <div class="">
-    <h1 id="home-work">Home work</h1>
-<p><code class="highlighter-rouge">Learn</code> Practice php from <a href="https://www.w3schools.com/php/php_intro.asp">w3schools</a> till topic <a href="https://www.w3schools.com/php/php_superglobals.asp">Super Globals</a></p>
-
-<h1 id="php-introduction">Php Introduction</h1>
+    <h1 id="php-introduction">Php Introduction</h1>
 <p>Our browser only know <code class="highlighter-rouge">html</code>, <code class="highlighter-rouge">css</code>, <code class="highlighter-rouge">js</code>. So whenever I write something in php, those <code class="highlighter-rouge">php</code> code should converted into <code class="highlighter-rouge">html</code>. So that browser can render our page. So in order write php, you need <code class="highlighter-rouge">php</code> and a server in your pc. There are 2 popular server for php development <code class="highlighter-rouge">apache</code> and <code class="highlighter-rouge">ngnix</code>. In php version 7 we can create a mini server. Although in production we won’t use php mini server. We will use apache or ngnix.    <br />
-So we will use a package called <a href="https://www.apachefriends.org/index.html">xampp</a>. Which actually a package of php and apache. Its easy to use and no need any configuration. We will just install xampp. And keep php project inside <code class="highlighter-rouge">htdocs</code> folder. In our browser  we will access those file by <code class="highlighter-rouge">localhost/YourFolder</code>.  <br />
+So we will use a package called <a href="https://www.apachefriends.org/index.html">xampp</a>. Which actually a package of php, apache and mysql. Its easy to use and no need any configuration. We will just install xampp. And keep php project inside <code class="highlighter-rouge">htdocs</code> folder. In our browser  we will access those file by <code class="highlighter-rouge">localhost/YourFolder</code>.  <br />
 Only 2 things you have to remember</p>
 <ul>
-  <li>You will keep your php file in <code class="highlighter-rouge">xampp &gt; htdocs &gt; tanim</code> folder</li>
-  <li>In browser you can access tanim by <code class="highlighter-rouge">http://localhost/tanim</code> address.</li>
+  <li>You will keep your php file in <code class="highlighter-rouge">xampp &gt; htdocs &gt; feni</code> folder</li>
+  <li>In browser you can access feni folder by <code class="highlighter-rouge">http://localhost/feni</code> address.</li>
 </ul>
 
 <h1 id="programming-101-with-php-total-7-things-have-to-consider">programming 101 with php (total 7 things have to consider)</h1>
-<p>In <a href="/class-10">class 10</a> we have learned programming basic using javascript. Today I have described programming basic using php. All programming more or less same. So if you became master in one, you will be master at any language by practicing about one month. 7 things in php are (<code class="highlighter-rouge">variable</code>, <code class="highlighter-rouge">constant</code>, <code class="highlighter-rouge">datatype</code>, <code class="highlighter-rouge">control flow</code>, <code class="highlighter-rouge">function</code>, <code class="highlighter-rouge">operator</code>, <code class="highlighter-rouge">namespace</code>). Only 2 new things you will know apart fom javaScript. one is <code class="highlighter-rouge">constant</code> and another is <code class="highlighter-rouge">namespace</code></p>
+<p>Earlier we have learned programming basic using javascript. Today I have described programming basic using php. All programming more or less same. So if you became master in one, you will be master at any language by practicing about one month. 7 things in php are (<code class="highlighter-rouge">variable</code>, <code class="highlighter-rouge">constant</code>, <code class="highlighter-rouge">datatype</code>, <code class="highlighter-rouge">control flow</code>, <code class="highlighter-rouge">function</code>, <code class="highlighter-rouge">operator</code>, <code class="highlighter-rouge">namespace</code>). Only 2 new things you will know apart fom javaScript. one is <code class="highlighter-rouge">constant</code> and another is <code class="highlighter-rouge">namespace</code></p>
 
 <ol>
   <li>Variable   <br />
 In php variable will start with <code class="highlighter-rouge">$</code> sign
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'sumon'</span><span class="p">;</span>
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$name</span> <span class="o">=</span> <span class="s1">'apple'</span><span class="p">;</span>
 </code></pre></div>    </div>
   </li>
   <li>constant    <br />
 In php when you need to keep some value fixed in entire application you should use constant. By convention people use only uppercase when declare constant. You can write constant in 2 ways. using <code class="highlighter-rouge">const</code> keyword or <code class="highlighter-rouge">define</code> function
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">define</span><span class="p">(</span><span class="s1">'SOME_CONSTANT_NAME'</span><span class="p">,</span> <span class="s1">'sumon'</span><span class="p">);</span>
-<span class="k">const</span> <span class="no">SOME_CONSTANT_NAME</span> <span class="o">=</span> <span class="nx">sumon</span><span class="p">;</span>
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">define</span><span class="p">(</span><span class="s1">'SOME_CONSTANT_NAME'</span><span class="p">,</span> <span class="s1">'apple'</span><span class="p">);</span>
+<span class="k">const</span> <span class="no">SOME_CONSTANT_NAME</span> <span class="o">=</span> <span class="s1">'apple'</span><span class="p">;</span>
 </code></pre></div>    </div>
   </li>
-  <li>Datatype
-    <ul>
-      <li>Scalar type (who holds only one value)</li>
-    </ul>
+  <li>Datatype</li>
+</ol>
+
+<ul>
+  <li>Scalar type (who holds only one value)
     <ul>
       <li>Numbers
         <ul>
@@ -101,21 +99,27 @@ In php when you need to keep some value fixed in entire application you should u
         </ul>
       </li>
       <li>Boolean (True, False)</li>
-      <li>String (Text)
-      * Composite type (who holds mix value)</li>
+      <li>String (Text)</li>
+    </ul>
+  </li>
+  <li>Composite type (who holds mix value)
+    <ul>
       <li>Array
         <ul>
           <li>Index array</li>
           <li>Associative array
-            <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sumon'</span><span class="p">,</span> <span class="s1">'sarwar'</span><span class="p">,</span> <span class="s1">'imran'</span><span class="p">];</span>   <span class="c1">//index array
-</span><span class="nv">$names</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//sumon     
-</span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span>
-<span class="s1">'name1'</span> <span class="o">=&gt;</span> <span class="s1">'sumon'</span><span class="p">,</span>
-<span class="s1">'name2'</span> <span class="o">=&gt;</span> <span class="s1">'sarwar'</span><span class="p">,</span>
-<span class="s1">'name3'</span> <span class="o">=&gt;</span> <span class="s1">'imran'</span>
+            <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//index array
+</span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grape'</span><span class="p">];</span> 
+<span class="nv">$names</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="c1">//apple     
+// associative array
+</span><span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grape'</span><span class="p">];</span> 
+<span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span>
+<span class="s1">'f1'</span> <span class="o">=&gt;</span> <span class="s1">'apple'</span><span class="p">,</span>
+<span class="s1">'f3'</span> <span class="o">=&gt;</span> <span class="s1">'orange'</span><span class="p">,</span>
+<span class="s1">'f3'</span> <span class="o">=&gt;</span> <span class="s1">'grape'</span>
 <span class="p">];</span>
-<span class="nv">$names</span><span class="p">[</span><span class="s1">'name2'</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'sarwar'</span>
-</code></pre></div>            </div>
+<span class="nv">$names</span><span class="p">[</span><span class="s1">'f1'</span><span class="p">]</span> <span class="c1">//apple
+</span></code></pre></div>            </div>
           </li>
         </ul>
       </li>
@@ -151,6 +155,9 @@ In php, object will get by instantiating a class. to get object we use <code cla
       </li>
     </ul>
   </li>
+</ul>
+
+<ol>
   <li>Control flow</li>
 </ol>
 
@@ -159,21 +166,18 @@ In php, object will get by instantiating a class. to get object we use <code cla
     <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//while 
 </span>  <span class="k">var</span> <span class="nv">$number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">while</span><span class="p">(</span><span class="nv">$number</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$names</span><span class="p">[</span><span class="nx">number</span><span class="p">];</span>
+    <span class="k">echo</span> <span class="nv">$number</span><span class="p">;</span>
     <span class="nv">$number</span> <span class="o">=</span> <span class="nv">$number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
   <span class="p">}</span>
   <span class="c1">//for, while, foreach  
 </span>
   <span class="k">for</span> <span class="p">(</span> <span class="nv">$number</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$number</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nv">$number</span> <span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$names</span><span class="p">[</span><span class="nx">number</span><span class="p">]</span>
-  <span class="p">}</span>
-  <span class="k">for</span> <span class="p">(</span><span class="nv">$number</span> <span class="nx">in</span> <span class="nv">$names</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nv">$names</span><span class="p">[</span><span class="nv">$number</span><span class="p">]</span>
+    <span class="k">echo</span> <span class="nv">$number</span><span class="p">;</span>
   <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
   <li>conditional
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//if, else, else if, elseif, switch, Ternary
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//if, else, else if, elseif
 </span>  <span class="k">if</span> <span class="p">(</span><span class="kc">true</span><span class="o">/</span><span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
      <span class="k">echo</span> <span class="s1">'if true'</span><span class="p">;</span>
   <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="kc">true</span> <span class="o">/</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
@@ -181,7 +185,23 @@ In php, object will get by instantiating a class. to get object we use <code cla
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
     <span class="k">echo</span> <span class="s1">'any if block is not true'</span><span class="p">;</span>
   <span class="p">}</span>
-
+  <span class="c1">//ternary
+</span>  <span class="nv">$age</span> <span class="o">&lt;</span> <span class="mi">18</span> <span class="o">?</span> <span class="s1">'do something'</span> <span class="o">:</span> <span class="s1">'do other things'</span><span class="p">;</span>
+  <span class="c1">//switch
+</span>  <span class="nv">$wheel</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nv">$wheel</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'cycle'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span> 
+      <span class="k">echo</span> <span class="s1">'cng'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'bus'</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">echo</span> <span class="s1">'train'</span><span class="p">;</span>
+  <span class="p">}</span>
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -192,24 +212,25 @@ In php, object will get by instantiating a class. to get object we use <code cla
 
     <p>Built in Function</p>
 
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'sumon'</span><span class="p">,</span> <span class="s1">'sarwar'</span><span class="p">,</span> <span class="s1">'tanim'</span><span class="p">];</span>
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'dhaka'</span><span class="p">,</span> <span class="s1">'comilla'</span><span class="p">,</span> <span class="s1">'feni'</span><span class="p">];</span>
  <span class="nb">count</span><span class="p">(</span><span class="nv">$names</span><span class="p">)</span> <span class="c1">// 3
-</span>
-</code></pre></div>    </div>
+</span></code></pre></div>    </div>
 
     <p>User Defined function</p>
 
     <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">function</span> <span class="nf">add</span> <span class="p">(</span><span class="nv">$number1</span><span class="p">,</span> <span class="nv">$number2</span><span class="p">)</span> <span class="p">{</span>
    <span class="k">return</span> <span class="nv">$number1</span> <span class="o">+</span> <span class="nv">$number2</span><span class="p">;</span>
  <span class="p">}</span>
- <span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
- <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="o">+</span><span class="mi">3</span><span class="p">);</span>
+ <span class="nx">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+ <span class="nx">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
 </code></pre></div>    </div>
   </li>
   <li>operator
-    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">+</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span> <span class="o">%</span> <span class="o">=</span> <span class="o">&gt;</span> <span class="o">&lt;</span> <span class="o">==</span> <span class="o">===</span>  <span class="o">++</span> <span class="o">--</span> <span class="o">|</span> 
+    <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">+</span> <span class="o">.</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span> <span class="o">%</span> <span class="o">=</span> <span class="o">&gt;</span> <span class="o">&lt;</span> <span class="o">==</span> <span class="o">===</span>  <span class="o">++</span> <span class="o">--</span> <span class="o">|</span> 
 </code></pre></div>    </div>
-    <p><code class="highlighter-rouge">%</code> (Modulus) returns the division remainder  <br />
+    <p><code class="highlighter-rouge">+</code> additional operator 
+<code class="highlighter-rouge">.</code> concatenation operator
+<code class="highlighter-rouge">%</code> (Modulus) returns the division remainder  <br />
 <code class="highlighter-rouge">++</code> increse by 1  <br />
 <code class="highlighter-rouge">--</code> decrese by 1  <br />
 <code class="highlighter-rouge">==</code> equal check  <br />
@@ -222,19 +243,23 @@ In php, object will get by instantiating a class. to get object we use <code cla
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //keeping namespace
   <span class="cp">&lt;?php
-  namespace Israt\HelloWorld;
+  namespace Dhaka;
+  class HelloWorld {
+
+  } 
   //some php code
   ?&gt;</span>
   <span class="cp">&lt;?php
-  namespace Tofael\HelloWorld;
-  //some php code
+  namespace Chittagong;
+  class HelloWorld {
+  
+  } 
   ?&gt;</span>
 
-  //In 2 cases we keep name HelloWorld. But since we add there app name `Israt` and `Tofael` before So it conflict with each others
-  //using 
+  //In 2 cases we make a class HelloWorld. But since we add there namespace `Dhaka` and `Chittagong` So it won't conflict with each other
+  //using namespace
   <span class="cp">&lt;?php</span>
-  <span class="nx">Use</span> <span class="nx">Israt\HelloWorld\fileName</span><span class="p">;</span>
-  <span class="nx">Use</span> <span class="nx">Tofael\HelloWorld\fileName</span><span class="p">;</span>
+  <span class="nx">Use</span> <span class="nx">Dhaka\HelloWorld</span><span class="p">;</span>
   <span class="cp">?&gt;</span>
 
 </code></pre></div></div>
@@ -255,23 +280,12 @@ In php, object will get by instantiating a class. to get object we use <code cla
 
 <h1 id="to-write-something-in-php">to write something in php</h1>
 
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">echo</span> <span class="s1">'Hello Tanim'</span><span class="p">;</span>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">echo</span> <span class="s1">'Hello World'</span><span class="p">;</span>
   <span class="c1">//or
-</span>  <span class="k">print</span> <span class="p">(</span><span class="s1">'Hello tanim'</span><span class="p">)</span>
+</span>  <span class="k">print</span> <span class="p">(</span><span class="s1">'Hello World'</span><span class="p">);</span>
 </code></pre></div></div>
 
 <h1 id="difference-between-php-and-js">difference between php and js</h1>
-<p>When we use some key value in ja we use <code class="highlighter-rouge">:</code>. Therefore in php it will be <code class="highlighter-rouge">=&gt;</code></p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">//js</span>
-  <span class="nx">key</span><span class="p">:</span> <span class="nx">value</span><span class="p">,</span>
-  <span class="nx">key</span><span class="p">:</span> <span class="nx">value</span>
-
-  <span class="c1">//php</span>
-  <span class="nx">key</span> <span class="o">=&gt;</span> <span class="nx">value</span><span class="p">,</span>
-  <span class="nx">key</span> <span class="o">=&gt;</span> <span class="nx">value</span>
-</code></pre></div></div>
-
 <p>In <code class="highlighter-rouge">js</code>, we getting value from object by <code class="highlighter-rouge">.</code> notation. In <code class="highlighter-rouge">php</code>, we will getting value by <code class="highlighter-rouge">-&gt;</code> notation.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  //js
@@ -280,6 +294,8 @@ In php, object will get by instantiating a class. to get object we use <code cla
   //php
   $object-&gt;name;
 </code></pre></div></div>
+
+<p>In js we use <code class="highlighter-rouge">+</code> as concatenation operator but in php we use <code class="highlighter-rouge">.</code> as concatenation operator.</p>
 
 
   </div>

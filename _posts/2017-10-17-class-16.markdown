@@ -1,53 +1,55 @@
 ---
 repo: 16_feni_oct_17
-number: 16 
 ---
 
-# Home work
-`Learn` Practice php from [w3schools](https://www.w3schools.com/php/php_intro.asp) till topic [Super Globals](https://www.w3schools.com/php/php_superglobals.asp)
 
 # Php Introduction    
 Our browser only know `html`, `css`, `js`. So whenever I write something in php, those `php` code should converted into `html`. So that browser can render our page. So in order write php, you need `php` and a server in your pc. There are 2 popular server for php development `apache` and `ngnix`. In php version 7 we can create a mini server. Although in production we won't use php mini server. We will use apache or ngnix.      
-So we will use a package called [xampp](https://www.apachefriends.org/index.html). Which actually a package of php and apache. Its easy to use and no need any configuration. We will just install xampp. And keep php project inside `htdocs` folder. In our browser  we will access those file by `localhost/YourFolder`.    
+So we will use a package called [xampp](https://www.apachefriends.org/index.html). Which actually a package of php, apache and mysql. Its easy to use and no need any configuration. We will just install xampp. And keep php project inside `htdocs` folder. In our browser  we will access those file by `localhost/YourFolder`.    
 Only 2 things you have to remember
-* You will keep your php file in `xampp > htdocs > tanim` folder
-* In browser you can access tanim by `http://localhost/tanim` address.
+* You will keep your php file in `xampp > htdocs > feni` folder
+* In browser you can access feni folder by `http://localhost/feni` address.
 
 # programming 101 with php (total 7 things have to consider)
-In [class 10](/class-10) we have learned programming basic using javascript. Today I have described programming basic using php. All programming more or less same. So if you became master in one, you will be master at any language by practicing about one month. 7 things in php are (`variable`, `constant`, `datatype`, `control flow`, `function`, `operator`, `namespace`). Only 2 new things you will know apart fom javaScript. one is `constant` and another is `namespace`
+Earlier we have learned programming basic using javascript. Today I have described programming basic using php. All programming more or less same. So if you became master in one, you will be master at any language by practicing about one month. 7 things in php are (`variable`, `constant`, `datatype`, `control flow`, `function`, `operator`, `namespace`). Only 2 new things you will know apart fom javaScript. one is `constant` and another is `namespace`
 
 
 1. Variable     
 In php variable will start with `$` sign
 ~~~php
-$name = 'sumon';
+$name = 'apple';
 ~~~
 2. constant      
 In php when you need to keep some value fixed in entire application you should use constant. By convention people use only uppercase when declare constant. You can write constant in 2 ways. using `const` keyword or `define` function 
 ~~~php
-define('SOME_CONSTANT_NAME', 'sumon');
-const SOME_CONSTANT_NAME = sumon;
+define('SOME_CONSTANT_NAME', 'apple');
+const SOME_CONSTANT_NAME = 'apple';
 ~~~
 3. Datatype
+
   * Scalar type (who holds only one value)
     * Numbers
       * Integer (absolute number - 10)
       * Floating / Double (Fractional number 13.14)
     * Boolean (True, False)
-    * String (Text)
+    * String (Text)      
+
   * Composite type (who holds mix value)
     * Array 
       * Index array
       * Associative array
     ~~~php
-      $names = ['sumon', 'sarwar', 'imran'];   //index array
-      $names[0]; //sumon     
+      //index array
+      $names = ['apple', 'orange', 'grape']; 
+      $names[0]; //apple     
+      // associative array
+      $names = ['apple', 'orange', 'grape']; 
       $names = [
-        'name1' => 'sumon',
-        'name2' => 'sarwar',
-        'name3' => 'imran'
+        'f1' => 'apple',
+        'f3' => 'orange',
+        'f3' => 'grape'
       ];
-      $names['name2'] = 'sarwar'
+      $names['f1'] //apple
     ~~~
     * Object     
       In php, object will get by instantiating a class. to get object we use `new` keyword. A `variable` inside class called `properties`. A `function` inside class called `Method`. 
@@ -85,21 +87,18 @@ const SOME_CONSTANT_NAME = sumon;
       //while 
       var $number = 0;
       while($number < 3 ) {
-        $names[number];
+        echo $number;
         $number = $number + 1;
       }
       //for, while, foreach  
 
       for ( $number = 0; $number < 3; $number ++ ) {
-        $names[number]
-      }
-      for ($number in $names) {
-        $names[$number]
+        echo $number;
       }
       ~~~      
   * conditional
-      ```php
-      //if, else, else if, elseif, switch, Ternary
+      ~~~php
+      //if, else, else if, elseif
       if (true/false) {
          echo 'if true';
       } else if (true / false) {
@@ -107,22 +106,34 @@ const SOME_CONSTANT_NAME = sumon;
       } else {
         echo 'any if block is not true';
       }
-
-      ```     
-
-
+      //ternary
+      $age < 18 ? 'do something' : 'do other things';
+      //switch
+      $wheel = 2;
+      switch ($wheel) {
+        case 2:
+          echo 'cycle';
+          break;
+        case 3: 
+          echo 'cng';
+          break;
+        case 4:
+          echo 'bus';
+          break;
+        default:
+          echo 'train';
+      }
+      ~~~     
 
 
 5. Function   
 
-
     Built in Function
 
-    ```php
-    $names = ['sumon', 'sarwar', 'tanim'];
+    ~~~php
+    $names = ['dhaka', 'comilla', 'feni'];
     count($names) // 3
-
-    ```
+    ~~~
 
     User Defined function   
 
@@ -130,14 +141,16 @@ const SOME_CONSTANT_NAME = sumon;
     function add ($number1, $number2) {
       return $number1 + $number2;
     }
-    add(2+3);
-    add(5+3);
+    add(2, 3);
+    add(5, 3);
     ~~~
   
 6. operator
 ~~~php
-+ - * / % = > < == ===  ++ -- | 
++ . - * / % = > < == ===  ++ -- | 
 ~~~
+`+` additional operator 
+`.` concatenation operator
 `%` (Modulus) returns the division remainder    
 `++` increse by 1    
 `--` decrese by 1    
@@ -151,19 +164,23 @@ const SOME_CONSTANT_NAME = sumon;
   ~~~php
   //keeping namespace
   <?php
-  namespace Israt\HelloWorld;
+  namespace Dhaka;
+  class HelloWorld {
+
+  } 
   //some php code
   ?>
   <?php
-  namespace Tofael\HelloWorld;
-  //some php code
+  namespace Chittagong;
+  class HelloWorld {
+  
+  } 
   ?>
 
-  //In 2 cases we keep name HelloWorld. But since we add there app name `Israt` and `Tofael` before So it conflict with each others
-  //using 
+  //In 2 cases we make a class HelloWorld. But since we add there namespace `Dhaka` and `Chittagong` So it won't conflict with each other
+  //using namespace
   <?php
-  Use Israt\HelloWorld\fileName;
-  Use Tofael\HelloWorld\fileName;
+  Use Dhaka\HelloWorld;
   ?>
 
   ~~~
@@ -188,25 +205,12 @@ Here `8000` is port number. You can use 4 digit number
 # to write something in php
 
   ~~~php
-  echo 'Hello Tanim';
+  echo 'Hello World';
   //or
-  print ('Hello tanim')
+  print ('Hello World');
   ~~~
 
 # difference between php and js
-When we use some key value in ja we use `:`. Therefore in php it will be `=>`      
-
-  ~~~js
-  //js
-  key: value,
-  key: value
-
-  //php
-  key => value,
-  key => value
-  ~~~
-
-
   In `js`, we getting value from object by `.` notation. In `php`, we will getting value by `->` notation.
 
   ~~~
@@ -216,6 +220,10 @@ When we use some key value in ja we use `:`. Therefore in php it will be `=>`
   //php
   $object->name;
   ~~~
+
+  In js we use `+` as concatenation operator but in php we use `.` as concatenation operator.
+  
+
 
 
 
