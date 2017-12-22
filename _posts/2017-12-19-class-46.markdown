@@ -15,28 +15,39 @@ Session::flush();
 
 ~~~php
 # Kayes.php
-<?php namespace App\kayes;
+namespace App\kayes;
 
 class Dhaka {
   const hello = 'hello from kayes';
 }
 # Tasnia.php
-<?php namespace App\Tasnia;
+namespace App\Tasnia;
 
 
 class Dhaka {
   const hello = 'hello from tasnia';
 }
 # index.php
-<?php
 require 'Kayes.php';
 require 'Tasnia.php';
 
 use App\Kayes\Dhaka as dhaka1;
 use App\Tasnia\Dhaka as dhaka2;
-
 echo dhaka2::hello;
 ~~~
+
+### method overloading
+
+~~~php
+class Person {
+
+}
+$object = new Person;
+$object->first_name = 'Tofael';
+$object->last_name = 'Ahmed';
+echo $object->first_name;
+~~~
+Here class  Person doesn't contains `first_name` and `last_name` property. Despite that we are assigning `first_name` and `last_name` to instantiation of Person class. This functionality known as method overloading. Which is bit confusing for non php programmer.
 
 ### method overriding 
 
@@ -57,6 +68,7 @@ $obj = new World();
 
 $obj->tanim();
 ~~~
+Here `tanim` method of World class overriding Hello class `tanim` method
 
 ### laravel tinkering 
 we can do all laravel things in laravel tinker
