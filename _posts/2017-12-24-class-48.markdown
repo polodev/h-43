@@ -1,0 +1,153 @@
+---
+repo: 48_feni_dec_24
+---
+
+# Wordpress Development
+
+## Installing wordpress locally
+* first download wp
+* extract wp
+* create a database
+* serving through php mini server
+* go to website and set up wordpress
+* to login to wordpress admin panel `localhost:8000/wp-admin`
+
+
+## wordpress post 
+Every post may have following 
+
+* title 
+* content
+* category
+* tag
+* featured image
+
+
+
+## wordpress page
+Every page may have following 
+* title
+* content 
+* template (like full width, without sidebar)
+
+## wordpress comments
+I can delete, unapproved comment, mark as spam
+
+## appearance 
+* menu
+* theme
+* widgets
+
+### menu   
+first create a menu 
+reorder menu
+tick as primary menu
+save menu
+### theme
+to change website ui we use theme
+We can install theme and active and deactive theme from here
+### widget 
+We can add or remove widget from this section. 
+
+## plugin
+We can activate, deactivate, install plugin from this section    
+
+## Setting
+* general
+* reading
+#### general (setting)
+We can change title, tag name of website from here
+#### reading (setting)
+We can set front page, and blog post listing from here. 
+
+## media
+for managing image, video and any other files
+
+===============================
+# Build a ecommerce using wordpress
+===============================         
+following topic we may have for ecommerce site    
+* post
+* page
+* product
+* cart 
+* coupon 
+* sharing
+
+
+# How to upload file to server and build a website
+
+Hosting company will give you cpanel, cpanel username and password.
+to go to your cpanel yourdomainname:2082 or yourdomain/cpanel    
+You will host your website inside filemanager >  public_html. What ever file you keep inside `public_html` it will show in your webpage   
+
+
+# How to install wp in cpanel 
+
+* upload all wp file to `public_html`. Uploading all file may take lot of time. Therefore we upload wordpress zip file and extract inside `public_html`
+* make a mysql database
+* make a mysql database user
+* Add User To Database 
+
+
+# how to build ecommerce with woocommerce plugin and storefront theme
+
+* install woocommerce plugin and activate plugin     
+* install storefront theme     
+* create contact and about page   
+
+
+# product 
+We can have 2 type of product 
+* simple product
+* variable product
+
+### simple product may have following field
+* title 
+* content 
+* short description
+* price
+* product image
+* product gallery image
+
+### variable product
+* title 
+* content 
+* short description
+* price     
+* attributes (all attribute separated by `|` character)
+* product image
+* product gallery image
+
+
+### some essential plugin for further tweaking our ecommerce shop
+* install `Woocommerce Social Media Share Buttons` By Toastie Studio
+* Installing `Homepage Control` plugin by wooAssists
+
+### how to add, update, delete product category
+* Product categories can be found under products sections. We can add a category. Upload a picture for category
+
+### customization 
+Customization option can be found under appearance section. From where we can change color, change style, add logo
+
+# our wp ecommerce store
+<a href="http://top-up-h43c.lictproject.com">Feni IT shop</a>
+
+
+# Thanks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

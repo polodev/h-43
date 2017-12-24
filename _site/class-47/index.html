@@ -139,6 +139,40 @@
 
 </code></pre></div></div>
 
+<h1 id="how-to-use-html-dom-parser-library-with-laravel">How to use html dom parser library with laravel</h1>
+
+<p>add dom parser library in composer.json file</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="s2">"sunra/php-simple-html-dom-parser"</span><span class="p">:</span> <span class="s2">"^1.5"</span><span class="p">,</span>
+</code></pre></div></div>
+
+<p>Make a Helpers class inside app/Libraries  (its totally up to where you want to create a class)   <br />
+in my case <code class="highlighter-rouge">app&gt;Libraries&gt;Helpers.php</code></p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">namespace</span> <span class="nx">App\Libraries</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Sunra\PhpSimple\HtmlDomParser</span><span class="p">;</span>
+
+
+<span class="k">class</span> <span class="nc">Helpers</span> <span class="p">{</span>
+  <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">excerpt</span><span class="p">(</span><span class="nv">$content</span><span class="p">,</span> <span class="nv">$limit</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nv">$dom</span> <span class="o">=</span> <span class="nx">HtmlDomParser</span><span class="o">::</span><span class="na">str_get_html</span><span class="p">(</span> <span class="nv">$content</span> <span class="p">);</span>
+    <span class="nv">$excerpt</span> <span class="o">=</span> <span class="nx">str_limit</span><span class="p">(</span> <span class="nv">$dom</span><span class="o">-&gt;</span><span class="na">plaintext</span><span class="p">,</span> <span class="nv">$limit</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nv">$excerpt</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span> 
+</code></pre></div></div>
+
+<p>Now create a alias inside <code class="highlighter-rouge">config/app.php</code></p>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'Helpers'</span> <span class="o">=&gt;</span> <span class="nx">App\Libraries\Helpers</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+</code></pre></div></div>
+
+<p>Now I can use this inside any blade file</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{{ Helpers::excerpt($post-&gt;content) }}
+
+</code></pre></div></div>
+
 
   </div>
 
@@ -146,6 +180,8 @@
     
       <a class="btn btn-info btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-46/">&laquo; Class 46</a>
     
+    
+      <a class="btn btn-success btn-lg .d-inline-block my-1" href="http://localhost:4000/h43/class-48/">Class 48 &raquo;</a>
     
   </div>
 
